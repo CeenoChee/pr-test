@@ -1,5 +1,5 @@
-trigger:
-- none
+pr:
+- main
 
 pool:
   name : CeenOtst
