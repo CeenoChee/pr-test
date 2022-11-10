@@ -16,3 +16,10 @@ steps:
     echo See https://aka.ms/yaml
     echo $(SYSTEM_PULLREQUEST_SOURCEREPOSITORYURI)
   displayName: 'Run a multi-line script'
+  
+- bash: |
+    FORKURI=$(curl -X GET "https://api.github.com/repos/$BUILD_REPOSITORY_NAME/pulls/$SYSTEM_PULLREQUEST_PULLREQUESTNUMBER" | jq -r '.head.repo.clone_url')
+    git clone "$FORKURI" .
+    git checkout "$SYSTEM_PULLREQUEST_SOURCEBRANCH"
+  displayName: 'Run a multi-line script'
+
