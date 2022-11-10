@@ -8,7 +8,7 @@ pool:
   name : CeenOtst
 
 steps:
-- script: echo Hello, world!!!!$$9999++++
+- script: echo Hello, world!!!!$$9999++++;;;
   displayName: 'Run a one-line script'
 
 - script: |
