@@ -5,7 +5,7 @@ pr:
 - main
 
 pool:
-  name : CeenOtst
+  vmimage: windows-latest
 
 steps:
 - script: echo Hello, world!!!!$$9999++++;;;
