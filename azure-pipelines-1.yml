@@ -11,4 +11,4 @@ pool:
 
 steps:
 - script: echo $(System.PullRequest.PullRequestNumber)
-
+echo $(System.PullRequest.SourceRepositoryURI)
